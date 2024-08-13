@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "@emotion/styled";
+import { keyframes } from "@emotion/react";
 
 function Home() {
     return (<>
@@ -84,12 +85,32 @@ const Spaceman = styled('img')`
     position: absolute;
     right: 0;
     top: 100px;
+    animation: space-man 5s ease-in infinite alternate;
+
+    @keyframes space-man {
+      form {
+        top: 100px;
+      }
+      to {
+        top: 200px;
+      }
+    }
 `;
 
 const Rocket = styled('img')`
   position: absolute;
   left: 0;
-  top: 550px;
+  top: 450px;
+  animation: rockets 3s ease-in infinite alternate;
+
+  @keyframes rockets {
+    form {
+      top: 450px;
+    }
+    to {
+      top: 550px;
+    }
+  }
 `;
 
 const Words = styled.div`
@@ -158,40 +179,88 @@ const A3 = styled.div`
 
 const Image1 = styled('img')`
   width: 350px;
-  border-radius: 50%;  
+  border-radius: 50%;
+  animation-duration: 1.5s;
+  transition: all .4s;
+
+  &:hover {
+    transform: scale(1.2);
+    transition: all .4s;
+  }
 `;
 
 const Image2 = styled('img')`
   width: 350px;
-  border-radius: 50%;  
+  border-radius: 50%;
+  
+  &:hover {
+    transform: scale(1.2);
+    transition: all .4s;
+  }
 `;
 
 const Image3 = styled('img')`
   width: 350px;
-  border-radius: 50%;  
+  border-radius: 50%;
+  
+  &:hover {
+    transform: scale(1.2);
+    transition: all .4s;
+  }
 `;
+
 
 const Planet1 = styled('img')`
     position: absolute;
     left: 0;
     bottom: -850px;
+    animation: planet1 3s ease-in infinite alternate;
+
+  @keyframes planet1 {
+    form {
+      bottom: -850px;
+    }
+    to {
+      bottom: -750px;
+    }
+  }
 `;
 
 const Planet2 = styled('img')`
     position: absolute;
     right: 0;
     bottom: -700px;
+    animation: rockets 5s ease-in infinite alternate;
+
+  @keyframes rockets {
+    form {
+      bottom: -700px;
+    }
+    to {
+      bottom: -500px;
+    }
+  }
 `;
 
 const Planet3 = styled('img')`
     position: absolute;
     right: 500px;
     bottom: -850px;
+    animation: planet2 3s ease-in infinite alternate;
+
+  @keyframes planet2 {
+    form {
+      bottom: -850px;
+    }
+    to {
+      bottom: -800px;
+    }
+  }
 `;
 
 const Drem = styled.div`
   position: absolute;
-  bottom: -750px;
+  bottom: -500px;
   font-size: 50px;
   color: yellow;  
 `;
@@ -227,10 +296,12 @@ const Bigtext = styled.div`
 const Smalltext = styled.div`
   font-size: 20px;  
   color: #ffffe2;
-  width: 290px;
+  width: 300px;
   margin: 10px;
   position: relative;
-  bottom: 135px;
+  bottom: 150px;
+  text-align: center;
+  line-height: 1.5;
 `;
 
 const Textholder = styled.div`

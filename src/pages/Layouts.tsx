@@ -16,6 +16,8 @@ function Layouts() {
                 <HeaderText><Link to="/pokemon">About</Link></HeaderText>
                 
                 <HeaderText><Link to="/pokemon">Activity</Link></HeaderText>
+
+                <HeaderText><Link to="/study">Study</Link></HeaderText>
             </Headercontainer>
             </HeaderBox>
         </Header>
@@ -45,7 +47,7 @@ const HeaderBox = styled.div`
 
 const Header = styled.div`
     width: 100%;
-    background-color: rgba(255,255,255, 0.3);
+    background-color: purple;
     margin: 0 auto;
     display: flex;
     align-items: center;
